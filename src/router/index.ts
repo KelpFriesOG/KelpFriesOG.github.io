@@ -1,18 +1,20 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import DefaultLayout from '../layouts/DefaultLayout.vue'
 import Home from '../views/Home.vue'
-// import About from '../views/About.vue'
-// import Projects from '../views/Projects.vue'
-// import Contact from '../views/Contact.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  // { path: '/about', component: About },
-  // { path: '/projects', component: Projects },
-  // { path: '/contact', component: Contact },
+  {
+    path: '/',
+    component: DefaultLayout,
+    children: [
+      { path: '', name: 'Home', component: Home },
+      // Add more pages here
+    ],
+  },
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 })
 

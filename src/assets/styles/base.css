@@ -1,0 +1,35 @@
+/* Add any global resets or helpers here */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&family=JetBrains+Mono&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-ananda: 'AnandaBlack', cursive;
+  --font-heading: 'Playfair Display', serif;
+  --font-code: 'JetBrains Mono', monospace;
+  --font-ui: system-ui, sans-serif;
+}
+
+.theme-serif {
+  --font-body: 'Playfair Display', serif;
+}
+
+.theme-coding {
+  --font-body: 'JetBrains Mono', monospace;
+}
+
+@font-face {
+  font-family: 'AnandaBlack';
+  src: url('../fonts/AnandaBlackRegular_rg9Rx.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
