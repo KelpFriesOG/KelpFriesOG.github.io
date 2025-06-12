@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@splidejs/vue-splide": "^0.6.12",
+    "docs": "^0.3.2-canary.0",
     "gsap": "^3.13.0",
     "swiper": "^11.2.8",
     "vue": "^3.5.13",
