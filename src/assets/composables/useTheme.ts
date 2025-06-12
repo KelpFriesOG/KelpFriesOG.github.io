@@ -4,6 +4,7 @@ import { ref, watch } from 'vue'
 const defaultTheme = 'theme-dark'
 const currentTheme = ref(localStorage.getItem('theme') || defaultTheme)
 
+// Hi
 export function useTheme() {
   const setTheme = (theme: string) => {
     currentTheme.value = theme
