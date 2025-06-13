@@ -6,6 +6,9 @@
   /* Navbar-specific */
   --header-bg-color: #ffffff;
   --header-text-color: #1a1a1a;
+
+  /* Hero-specific */
+  --hero-bg: radial-gradient(ellipse at center, #eeeeee, #cccccc);
 }
 
 .theme-dark {
@@ -15,6 +18,8 @@
 
   --header-bg-color: #1e1e1e;
   --header-text-color: #f0f0f0;
+
+  --hero-bg: radial-gradient(ellipse at center, #1e1e1e, #111);
 }
 
 .theme-protanopia {
@@ -24,4 +29,6 @@
 
   --header-bg-color: #ffffff;
   --header-text-color: #111;
+
+  --hero-bg: radial-gradient(ellipse at center, #fefefe, #dddddd);
 }

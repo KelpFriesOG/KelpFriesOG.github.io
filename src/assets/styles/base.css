@@ -15,6 +15,11 @@ body {
   --font-ananda: 'AnandaBlack', cursive;
   --font-heading: 'Playfair Display', serif;
   --font-code: 'Fira Code', monospace;
+  --font-argon: 'Monaspace Argon', monospace;
+  --font-neon: 'Monaspace Neon', monospace;
+  --font-krypton: 'Monaspace Krypton', monospace;
+  --font-radon: 'Monaspace Radon', monospace;
+  --font-xenon: 'Monaspace Xenon', monospace;
   --font-ui: system-ui, sans-serif;
 }
 
@@ -26,10 +31,85 @@ body {
   --font-body: 'JetBrains Mono', monospace;
 }
 
+/* .mono-argon {
+  font-family: 'Monaspace Argon', monospace;
+  font-weight: 400;
+  font-stretch: 90%;
+}
+
+.mono-krypton {
+  font-family: 'Monaspace Krypton', monospace;
+  font-weight: 400;
+  font-stretch: 90%;
+}
+
+.mono-neon {
+  font-family: 'Monaspace Neon', monospace;
+  font-weight: 400;
+  font-stretch: 90%;
+}
+
+.mono-radon {
+  font-family: 'Monaspace Radon', monospace;
+  font-weight: 400;
+  font-stretch: 90%;
+}
+
+.mono-xenon {
+  font-family: 'Monaspace Xenon', monospace;
+  font-weight: 400;
+  font-stretch: 90%;
+} */
+
 @font-face {
   font-family: 'AnandaBlack';
   src: url('../fonts/AnandaBlackRegular_rg9Rx.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monaspace Argon';
+  src: url('../fonts/MonaspaceArgonVarVF.woff2') format('woff2');
+  font-weight: 100 900;              /* Full range */
+  font-stretch: 75% 125%;            /* Optional if used */
+  font-style: oblique 0deg 10deg;    /* Supports slant */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monaspace Krypton';
+  src: url('../fonts/MonaspaceKryptonVarVF.woff2') format('woff2');
+  font-weight: 100 900;              /* Full range */
+  font-stretch: 75% 125%;            /* Optional if used */
+  font-style: oblique 0deg 10deg;    /* Supports slant */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monaspace Neon';
+  src: url('../fonts/MonaspaceNeonVarVF.woff2') format('woff2');
+  font-weight: 100 900;              /* Full range */
+  font-stretch: 75% 125%;            /* Optional if used */
+  font-style: oblique 0deg 10deg;    /* Supports slant */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monaspace Radon';
+  src: url('../fonts/MonaspaceRadonVarVF.woff2') format('woff2');
+  font-weight: 100 900;              /* Full range */
+  font-stretch: 75% 125%;            /* Optional if used */
+  font-style: oblique 0deg 10deg;    /* Supports slant */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monaspace Xenon';
+  src: url('../fonts/MonaspaceXenonVarVF.woff2') format('woff2');
+  font-weight: 100 900;              /* Full range */
+  font-stretch: 75% 125%;            /* Optional if used */
+  font-style: oblique 0deg 10deg;    /* Supports slant */
   font-display: swap;
 }

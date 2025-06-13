@@ -1,20 +1,27 @@
 <template>
   <section class="hero">
-    <h1>Hello, I'm <b ref="text" class="highlight breathing-text" style="font-family: var(--font-ananda);">Kalpesh</b></h1>
-    <p class="tagline" style="padding: clamp(1rem, 5vw, 4rem); font-size: clamp(1.5rem, 4vw, 6rem);">I build ethical, intentional AI tools.</p>
-    <div class="scroll-indicator">↓</div>
+    <h1>Hello, I'm <b ref="breathing_text" class="highlight breathing-text" style="font-family: var(--font-ananda);">Kalpesh</b></h1>
+    <p ref="typewriter_text" class="tagline" style="font-size: clamp(1.5rem, 4vw, 6rem);">I build ethical, intentional AI tools.</p>
+    <div class="scroll-indicator-down">↓</div>
   </section>
 </template>
 
 <script setup lang="ts">
 
 import gsap from 'gsap'
+import TextPlugin from 'gsap/TextPlugin';
 import { onMounted, ref } from 'vue';
 
-const text = ref<HTMLElement | null>(null)
+gsap.registerPlugin(TextPlugin)
+
+const breathing_text = ref<HTMLElement | null>(null)
+const typewriter_text = ref<HTMLElement | null>(null)
 
 onMounted(() => {
-  if (!text.value) return;
+  
+  // Handling Breathing text
+
+  if (!breathing_text.value) return;
 
   const oceanColors = [
     '#66ffcc', // mint green
@@ -28,13 +35,29 @@ onMounted(() => {
   const tl = gsap.timeline({ repeat: -1 });
 
   oceanColors.forEach((color) => {
-    tl.to(text.value, {
+    tl.to(breathing_text.value, {
       color,
       scale: 1.04,
       duration: 1.5,
       ease: 'sine.inOut',
     });
   });
+
+  // Handling typewriter effect
+  if (!typewriter_text.value) return;
+
+  typewriter_text.value.innerHTML = ''
+
+  const t2 = gsap.timeline()
+
+  // Typewriter effect
+  t2.to(typewriter_text.value, {
+    text: 'I build ethical, transparent, and useful AI tools.',
+    duration: 2,
+    ease: 'none',
+    delay: 0.5,
+  })
+
 });
 
 </script>
@@ -47,7 +70,7 @@ onMounted(() => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(ellipse at center, #1e1e1e, #111);
+  background: var(--hero-bg);
   color: var(--text-color);
   text-align: center;
   font-family: var(--font-heading);
@@ -63,14 +86,13 @@ onMounted(() => {
 }
 
 .highlight {
-  color: var(--accent-color);
   font-weight: bold;
   opacity: 0.85;
+  font-size: clamp(2.5rem, 15vw, 8rem);
 }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
+.scroll-indicator-down {
+  font-family: var(--font-neon);
   font-size: 1.5rem;
   animation: bounce 1.5s infinite ease-in-out;
   opacity: 0.6;
@@ -78,6 +100,16 @@ onMounted(() => {
 
 .tagline {
   font-family: var(--font-code)
+}
+
+.tagline::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 @keyframes bounce {
