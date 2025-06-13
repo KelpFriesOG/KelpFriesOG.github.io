@@ -30,6 +30,12 @@ onMounted(() => {
     '#66ccff', // baby blue
     '#33ffcc', // aqua
     '#00cc99', // sea green
+
+    // Chopper's Suggestions
+
+    // '#cc0000', // deep red
+    // '#990000', // dark crimson
+    
   ];
 
   const tl = gsap.timeline({ repeat: -1 });
@@ -68,7 +74,7 @@ onMounted(() => {
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   background: var(--hero-bg);
   color: var(--text-color);
@@ -79,6 +85,13 @@ onMounted(() => {
   font-size: clamp(2.5rem, 8vw, 6rem);
   line-height: 1.1;
   margin: 0;
+}
+
+.hero::before {
+  content: "";
+  height: var(--navbar-height); /* or use fixed height if needed */
+  display: block;
+  flex-shrink: 0;
 }
 
 .breathing-text {
@@ -99,7 +112,7 @@ onMounted(() => {
 }
 
 .tagline {
-  font-family: var(--font-code)
+  font-family: var(--font-ui)
 }
 
 .tagline::after {

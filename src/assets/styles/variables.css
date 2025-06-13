@@ -32,3 +32,11 @@
 
   --hero-bg: radial-gradient(ellipse at center, #fefefe, #dddddd);
 }
+
+.theme-chopper {
+  --bg-color: #6e0303;
+}
+
+.theme-palestine {
+  
+}

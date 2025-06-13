@@ -8,19 +8,32 @@
 </template>
 
 <style scoped>
+
 .slide {
+  position: relative; /* <-- This is the key */
   height: 100vh;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 2rem;
-  font-style: italic;
+  padding-inline: clamp(1rem, 4vw, 4rem); /* horizontal only */
+  padding-top: clamp(3rem, 8vh, 5rem); /* match your header height */
   text-align: center;
+  font-family: var(--font-xenon);
+  z-index: 1;
 }
+
+.slide::before {
+  content: "";
+  height: var(--navbar-height); /* or use fixed height if needed */
+  display: block;
+  flex-shrink: 0;
+}
+
 blockquote {
   font-size: 1.5rem;
   margin-bottom: 1rem;

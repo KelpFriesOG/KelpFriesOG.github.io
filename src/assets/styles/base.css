@@ -11,6 +11,7 @@ body {
 }
 
 :root {
+  --navbar-height: clamp(3rem, 8vh, 5rem);
   --font-body: 'Inter', system-ui, sans-serif;
   --font-ananda: 'AnandaBlack', cursive;
   --font-heading: 'Playfair Display', serif;

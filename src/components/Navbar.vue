@@ -46,10 +46,14 @@ const menuOpen = ref(false)
   top: 0;
   z-index: 999;
   background-color: var(--header-bg-color);
-  height: 80px;
+  height: var(--navbar-height); /* responsive height */
   display: flex;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-padding-top: clamp(3rem, 8vh, 5rem);
 }
 
 .nav-container {
