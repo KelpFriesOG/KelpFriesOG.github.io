@@ -2,16 +2,16 @@
   <header class="site-header">
     <nav class="nav-container">
       <div class="nav-left">
-        <a href="/" class="logo">
+        <router-link to="/" class="logo">
           <img src="/assets/logo.png" alt="Logo" />
-        </a>
+        </router-link>
       </div>
       <button class="menu-toggle" @click="menuOpen = !menuOpen">
         ☰
       </button>
       <ul class="nav-links" :class="{ open: menuOpen }">
         <li class="dropdown">
-          <a href="#about">About Me</a>
+          <router-link to="/about">About Me</router-link>
         </li>
         <li class="dropdown">
           <a href="#projects">Projects</a>
@@ -36,8 +36,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-const menuOpen = ref(false);
+import { ref } from 'vue'
+const menuOpen = ref(false)
 </script>
 
 <style scoped>
@@ -97,14 +97,16 @@ const menuOpen = ref(false);
   position: relative;
 }
 
-.nav-links li a {
+.nav-links li a,
+.nav-links li :deep(a) {
   text-decoration: none;
   color: var(--text-color);
   font-size: 1.1rem;
   position: relative;
 }
 
-.nav-links li a::after {
+.nav-links li a::after,
+.nav-links li :deep(a)::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -117,7 +119,8 @@ const menuOpen = ref(false);
   transition: transform 0.3s ease;
 }
 
-.nav-links li a:hover::after {
+.nav-links li a:hover::after,
+.nav-links li :deep(a):hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -128,7 +131,7 @@ const menuOpen = ref(false);
   top: 100%;
   left: 0;
   background-color: var(--header-bg-color);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   list-style: none;
   padding: 0.5rem 0;
   min-width: 150px;
@@ -144,7 +147,7 @@ const menuOpen = ref(false);
 }
 
 .submenu li a:hover {
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .dropdown:hover .submenu {

@@ -1,5 +1,5 @@
 /* Add any global resets or helpers here */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&family=JetBrains+Mono&display=swap&family=Fira+Code:wght@500');
 
 body {
   margin: 0;
@@ -14,7 +14,7 @@ body {
   --font-body: 'Inter', system-ui, sans-serif;
   --font-ananda: 'AnandaBlack', cursive;
   --font-heading: 'Playfair Display', serif;
-  --font-code: 'JetBrains Mono', monospace;
+  --font-code: 'Fira Code', monospace;
   --font-ui: system-ui, sans-serif;
 }
 
